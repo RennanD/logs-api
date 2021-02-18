@@ -18,13 +18,13 @@
             "App\\": "app/",
             "Source\\": "src/",
             "Modules\\": "src/modules",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Factories\\": "src/database/factories/",
+            "Database\\Seeders\\": "src/database/seeders/"
         }
     },
     "autoload-dev": {
         "classmap": [
-            "tests/"
+            "src/modules/APIClient/tests/"
         ]
     },
     "config": {

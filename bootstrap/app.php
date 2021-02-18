@@ -108,8 +108,9 @@ $app->configure('app');
 
 $app->router->group([
     'namespace' => 'App\Http\Controllers',
+    'namespace' => 'Modules\APIClient\Http\Controllers',
 ], function ($router) {
-    require __DIR__.'/../routes/web.php';
+    require __DIR__.'/../src/routes/web.php';
 });
 
 return $app;
