@@ -31,8 +31,6 @@ class CreateLogServiceTest extends TestCase {
 
     $log = $createLog->run(200,"test","message-test");
 
-    var_dump($log['body']);
-
-    $this->assertClassHasAttribute('id', $log['body']);
+    $this->assertInstanceOf(Log::class, $log['body']);
   }
 }
