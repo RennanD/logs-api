@@ -24,7 +24,7 @@
     },
     "autoload-dev": {
         "classmap": [
-            "src/modules/APIClient/tests/"
+            "tests/"
         ]
     },
     "config": {
