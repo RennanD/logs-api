@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Log extends Model {
 
-  private int $id;
-  private int $status_code;
-  private string $type;
-  private mixed $body;
+  public int $id;
+  public int $status_code;
+  public string $type;
+  public $body;
 
   public function __construct() {
 
@@ -28,7 +28,7 @@ class Log extends Model {
     $this->type = $type;
     $this->body = $body;
 
-    return $this;
+    return new Log();
   }
 
 }

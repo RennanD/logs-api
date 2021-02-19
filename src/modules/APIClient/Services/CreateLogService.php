@@ -27,6 +27,8 @@ class CreateLogService {
       return $httpResponse->badRequest('Invalid type for the log.');
     }
 
-    return $httpResponse->success('Success');
+    $log = $this->logRespository->create($status_code,$type,$body);
+
+    return $httpResponse->success($log);
   }
 }
