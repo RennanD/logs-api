@@ -19,6 +19,7 @@
             "Source\\": "src/",
             "Modules\\": "src/modules",
             "Database\\Factories\\": "src/database/factories/",
+            "Database\\Migrations\\": "src/database/migrations/",
             "Database\\Seeders\\": "src/database/seeders/"
         }
     },

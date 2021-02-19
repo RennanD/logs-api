@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\APIClient\Fakes;
+namespace Modules\APIClient\Repositories\Fakes;
 
 use Modules\APIClient\Eloquent\Models\Log;
 use Modules\APIClient\Repositories\LogRespositoryInterface;

@@ -28,7 +28,7 @@ class Log extends Model {
     $this->type = $type;
     $this->body = $body;
 
-    return new Log();
+    return $this;
   }
 
 }
