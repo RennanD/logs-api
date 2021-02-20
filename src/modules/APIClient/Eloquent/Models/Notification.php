@@ -4,17 +4,14 @@ namespace Modules\APIClient\Eloquent\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Log extends Model {
+class Notification extends Model {
 
   /**
    * @var array
    */
   protected $fillable = [
-    'status_code', 'type', 'body'
+    'status_code', 'type', 'message', 'console'
   ];
 
-  public function setLog() {
-    return $this;
-  }
 
 }

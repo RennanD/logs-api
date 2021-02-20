@@ -1,7 +1,7 @@
 <?php
-namespace Modules\APIClient\Implementations;
+namespace Modules\APIClient\Providers\Implementations\ConvertArray;
 
-use Modules\APIClient\Providers\ConvertArrayToStringInterface;
+use Modules\APIClient\Providers\Models\ConvertArrayToStringInterface;
 
 class EncodeConvertArrayToString implements ConvertArrayToStringInterface{
   public function convert(array $array): string {

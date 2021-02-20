@@ -1,7 +1,7 @@
 <?php
 
 use Modules\APIClient\Eloquent\Models\Log;
-use Modules\APIClient\Implementations\Fakes\FakeConvertArrayToString;
+use Modules\APIClient\Providers\Implementations\ConvertArray\Fakes\FakeConvertArrayToString;
 use Modules\APIClient\Services\CreateLogService;
 use Modules\APIClient\Repositories\Fakes\FakeLogsRepository;
 
@@ -40,15 +40,14 @@ class CreateLogServiceTest extends TestCase {
 
   }
 
-  public function testShouldTheConvertArrayReturnsAString() {
+  public function testShouldAbleToSendANotificationWhenThrows() {
     $logRepository = new FakeLogsRepository();
     $convertToArray = new FakeConvertArrayToString();
 
-    $createLog = new CreateLogService($logRepository, $convertToArray);
+    $sendNotificationMock = $this->createMock(FakeSendNotification::class);
+    $sendNotificationMock->expects($this->once())->method('send');
 
-    $createLog->run(200,"test",["foo" => "bar"]);
-
-    $this->assertEquals('string', $convertToArray->convert(["foo" => "bar"]));
+    $createLog = new CreateLogService($logRepository, $convertToArray, $sendNotificationMock);
   }
 
   public function testShouldBeAbleToCreateANewLog(){

@@ -24,7 +24,7 @@ class FakeLogsRepository implements LogRespositoryInterface {
   public function create(int $status_code, string $type, $body): Log {
     $logModel = new Log();
 
-    $log = $logModel->setLog(1, $status_code, $type, $body);
+    $log = $logModel->setLog();
 
     return $log;
   }

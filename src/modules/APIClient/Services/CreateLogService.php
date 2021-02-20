@@ -3,7 +3,7 @@
 namespace Modules\APIClient\Services;
 
 use Modules\APIClient\Http\Helpers\HttpResponseHelper;
-use Modules\APIClient\Providers\ConvertArrayToStringInterface;
+use Modules\APIClient\Providers\Models\ConvertArrayToStringInterface;
 use Modules\APIClient\Repositories\LogRespositoryInterface;
 
 class CreateLogService {

@@ -1,7 +1,7 @@
 <?php
-namespace Modules\APIClient\Implementations\Fakes;
+namespace Modules\APIClient\Providers\Implementations\ConvertArray\Fakes;
 
-use Modules\APIClient\Providers\ConvertArrayToStringInterface;
+use Modules\APIClient\Providers\Models\ConvertArrayToStringInterface;
 
 class FakeConvertArrayToString implements ConvertArrayToStringInterface{
   public function convert(array $array): string {
